@@ -40,7 +40,7 @@ By integrating real-time space weather telemetry, Random Forest predictive model
 
 Run the complete interactive mission control dashboard directly in your browser:
 
-[👉 [Open SPECTRA on Google Colab](https://colab.research.google.com/github/rahi4403/SPECTRA/blob/main/SPECTRA.ipynb)](https://colab.research.google.com/github/rahi4403/SPECTRA/blob/main/YOUR_EXACT_FILE_NAME.ipynb)
+👉 [Open SPECTRA on Google Colab](https://colab.research.google.com/github/rahi4403/SPECTRA/blob/main/spectra%20(2).ipynb)
 
 ### 2. Run Locally
 
