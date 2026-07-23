@@ -1,38 +1,43 @@
-# 🛰️ SPECTRA: Solar Payload Exposure & Calibrated Telemetry Risk Engine
+# 🛰️ SPECTRA: Space-Weather Payload Exposures & Calibrated Telemetry Risk Analyzer
 
-**SPECTRA** is an advanced heliophysics diagnostic and orbital risk assessment platform designed to predict Single-Event Upsets (SEUs), sensor degradation, and system criticalities for satellites operating in Low Earth Orbit (LEO) and Geostationary Orbit (GEO). 
+**SPECTRA** is an advanced heliophysics diagnostic, machine learning, and orbital risk assessment platform designed to predict Single-Event Upsets (SEUs), sensor degradation, and subsystem criticalities for satellites operating in Low Earth Orbit (LEO) and Geostationary Orbit (GEO).
 
-By integrating real-time space weather parameters with Keplerian orbital propagation, SPECTRA provides mission control operators with dynamic risk modeling and automated hardware countermeasure triggers.
+By integrating real-time space weather telemetry, Random Forest predictive modeling, material radiation shielding calculations, and Keplerian orbital mechanics, SPECTRA provides mission control operators with dynamic risk diagnostics and automated hardware countermeasure triggers.
 
 ---
 
 ## 🌟 Key Features
 
-* **Real-Time Space Weather Ingestion:** Dynamic risk scoring based on Solar Flare Classification ($C$, $M$, $X$-class), Coronal Mass Ejection (CME) velocity, and proton flux density ($>10\text{ MeV}$).
-* **3D Orbital Trajectory & Anomaly Mapping:** Interactive 3D visualization rendering satellite tracks across orbital space, highlighting high-density radiation zones such as the **South Atlantic Anomaly (SAA)**.
-* **Subsystem Hardware Risk Breakdown:** Granular diagnostic threat matrices for:
-  * **Optical CMOS Sensors** (gate-oxide breakdown risk)
-  * **SRAM Flight Computers** (soft bit-flips & latch-ups)
-  * **RF Transceivers** (signal-to-noise degradation)
-* **Automated Defensive Protocols:** Triggered hardware countermeasures (CMOS safe-mode locking, high-frequency SRAM memory scrubbing, and solar array vector re-orientation) when risk exceeds critical thresholds ($>70\%$).
-* **Preset Satellite Mission Profiles:** Out-of-the-box configurations for the **International Space Station (ISS)**, **Hubble Space Telescope (HST)**, **Starlink LEO Constellation**, and **GOES-16**.
-* **Automated Incident Logging:** One-click generation and export of official `.txt` telemetry incident reports.
+* **Machine Learning SEU Risk Engine:** Train-tested **Random Forest Regressor** trained on synthetic heliophysics telemetry (2,500 samples), achieving an **R² score of 0.9828** and **RMSE of 2.0519**.
+* **Real-Time Space Weather Ingestion:** Dynamic hazard tracking based on Solar Flare Classifications (C1.0 to X10.0), CME velocities (300 to 2800 km/s), and proton flux density (100 to 10,000 pfu).
+* **Hardware Material Radiation Attenuation:** Multi-layer material shielding decay calculations considering:
+  * **Aluminum (Standard 6061)**
+  * **Tantalum (High-Z Radiation Barrier)**
+  * **Polyethylene (Hydrogen-Rich Protection)**
+* **3D Sci-Fi Orbital & Atmospheric Render Engine:** Interactive 3D visualization rendering satellite trajectory tracks, atmospheric halos, and high-density spatial zones like the **South Atlantic Anomaly (SAA)**.
+* **Subsystem Hardware Risk Matrix:** Granular diagnostic threat assessments for:
+  * **Optical CMOS Sensors** (gate-oxide breakdown & soft errors)
+  * **Flight Computer Cache (SRAM)** (bit-flips & latch-up sensitivity)
+  * **RF Transceiver Avionics** (signal-to-noise degradation)
+* **Preset Satellite Mission Profiles:** Quick-load profiles for the **ISS**, **Hubble Space Telescope (HST)**, **Starlink LEO Constellation**, and **GOES-16**.
+* **Automated Incident Logging:** One-click generation and export of official `.txt` telemetry incident reports complete with mission metadata and timestamped protocols.
 
 ---
 
 ## 🛠️ Built With
 
-* **Python 3.10+**
-* **Gradio / Plotly** (Interactive UI & 3D Web Graphics)
-* **NumPy / Pandas** (Data Processing & Mathematical Modeling)
-* **Astrodynamics & Heliophysics Frameworks**
+* **Python 3.12+**
+* **scikit-learn** (Random Forest Machine Learning Regressor)
+* **Gradio & Plotly** (Interactive Cyber HUD Interface & 3D Visualizations)
+* **NumPy & Pandas** (Telemetry Data Analytics & Orbital Math Processing)
+* **ipywidgets & IPython** (Jupyter Interactive Notebook Support)
 
 ---
 
 ## 🚀 Getting Started
 
 ### 1. Try it on Google Colab
-You can run the full interactive notebook directly in your browser:
+Run the complete interactive mission control dashboard directly in your browser:  
 👉 [Open SPECTRA on Google Colab](https://colab.research.google.com/github/rahi4403/SPECTRA/blob/main/spectra.ipynb)
 
 ### 2. Run Locally
